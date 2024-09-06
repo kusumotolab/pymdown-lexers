@@ -2,16 +2,10 @@
 """Setup pymdown-lexers."""
 from setuptools import setup, find_packages
 
-entry_points = {
-    "mkdocs.plugins": [
-        "lexp = pymdown_lexers:LexpLexer"
-    ]
-}
-
-#'''
-#[pygments.lexers]
-#lexp=pymdown_lexers:LexpLexer
-#'''
+entry_points = '''
+[pygments.lexers]
+lexp=pymdown_lexers:LexpLexer
+'''
 
 setup(
     name='pymdown-lexers',
