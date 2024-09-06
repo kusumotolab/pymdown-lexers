@@ -10,15 +10,17 @@ class LexpLexer(RegexLexer):
 
     tokens = {
         'root': [
-            (r'[a-z]+', Name),
-            (r'[A-Z]+', Name),
             (r'\s+', Whitespace),
-            (r'[0-9]+', Number),
-            (r'λ', Keyword),
-            (r'->', Keyword),
+            (r'λ\w*', Name.Function),
+            (r'->\w?', Keyword),
+            (r'=', Keyword),
+            (r';.*?$', Comment.Singleline),
             (r'//.*?$', Comment.Singleline),
             (r'\(', Punctuation),
             (r'\)', Punctuation),
             (r'\.', Operator),
+            (r'[a-z]+', Name),
+            (r'[A-Z]+', Name),
+            (r'[0-9]+', Number),
         ]
     }
