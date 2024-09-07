@@ -1,11 +1,11 @@
 from pygments.lexer import RegexLexer, bygroups
 from pygments.token import *
 
-__all__ = ("LexpLexer",)
+__all__ = ("LambdaExpressionLexer",)
 
-class LexpLexer(RegexLexer):
-    name = 'lexp'
-    aliases = ['lexp']
+class LambdaExpressionLexer(RegexLexer):
+    name = 'Lambda Expression'
+    aliases = ['lexp', 'lambda-expression']
     filenames = ['*.lexp']
 
     tokens = {

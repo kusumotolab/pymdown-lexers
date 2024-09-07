@@ -4,7 +4,8 @@ from setuptools import setup, find_packages
 
 entry_points = '''
 [pygments.lexers]
-lexp=pymdown_lexers:LexpLexer
+lambdaexpression=pymdown_lexers:LambdaExpressionLexer
+bettertext=pymdown_lexers:BetterTextLexer
 '''
 
 setup(

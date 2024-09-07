@@ -1,3 +1,4 @@
-from .lexp import LexpLexer
+from .lambdaexpression import LambdaExpressionLexer
+from .bettertext import BetterTextLexer
 
-__all__ = ("LexpLexer")
+__all__ = ("LambdaExpressionLexer", "BetterTextLexer")
