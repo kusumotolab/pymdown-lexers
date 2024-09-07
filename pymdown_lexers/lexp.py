@@ -1,4 +1,4 @@
-from pygments.lexer import RegexLexer
+from pygments.lexer import RegexLexer, bygroups
 from pygments.token import *
 
 __all__ = ("LexpLexer",)
@@ -11,16 +11,14 @@ class LexpLexer(RegexLexer):
     tokens = {
         'root': [
             (r'\s+', Whitespace),
-            (r'λ\w*', Name.Function),
-            (r'->\w?', Keyword),
-            (r'=', Keyword),
+            (r'(λ)(\w*)', bygroups(Name.Function, Name.Entity)),
+            (r'[\(\)]', Punctuation),
+            (r'->\w?', Operator),
+            (r'=', Operator),
+            (r'[\.\+\-\*/]', Operator),
             (r';.*?$', Comment.Singleline),
             (r'//.*?$', Comment.Singleline),
-            (r'\(', Punctuation),
-            (r'\)', Punctuation),
-            (r'\.', Operator),
-            (r'[a-z]+', Name),
-            (r'[A-Z]+', Name),
+            (r'[a-zA-Z]+', Name),
             (r'[0-9]+', Number),
         ]
     }
