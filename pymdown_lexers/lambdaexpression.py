@@ -10,8 +10,9 @@ class LambdaExpressionLexer(RegexLexer):
 
     tokens = {
         'root': [
+            (r'\?\?\?', String.Escape),
             (r'\s+', Whitespace),
-            (r'(λ)(\w*)', bygroups(Name.Function, Name.Entity)),
+            (r'(λ)(\w*)', bygroups(String.Escape, Name.Function)),
             (r'[\(\)]', Punctuation),
             (r'->\w?', Operator),
             (r'=', Operator),
