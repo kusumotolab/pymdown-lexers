@@ -6,6 +6,7 @@ entry_points = '''
 [pygments.lexers]
 lambdaexpression=pymdown_lexers:LambdaExpressionLexer
 bettertext=pymdown_lexers:BetterTextLexer
+multibytebnf=pymdown_lexers:MultibyteBnfLexer
 '''
 
 setup(
