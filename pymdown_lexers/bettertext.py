@@ -13,13 +13,17 @@ class BetterTextLexer(RegexLexer):
             (r'\?\?\?', String.Escape),
             (r'^[\da-zA-Z]+:', Name.Function),
 
+            (r'::=', Name.Label),
+
             (r'[↑↓→←─│┌┐┘└├┬┤┴┼]', Operator),
 
             (r'^(#)( .*)$', bygroups(Operator, Text)),
 
-            (r'[(){}\[\]]', Punctuation),
+            (r'"(.*?)"', String.Double),
+            (r"'(.*?)'", String.Single),
 
-            (r';.*?$', Comment),
+            (r'[(){}\[\],.;]', Punctuation),
+
             (r'//.*?$', Comment),
             (r'#\s.*?$', Comment),
 
