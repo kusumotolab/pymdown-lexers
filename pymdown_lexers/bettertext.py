@@ -40,7 +40,7 @@ class BetterTextLexer(RegexLexer):
             (r'\b(for|in|while|do|break|return|continue|switch|case|default|if|else|'
              r'throw|try|catch|finally|yield|await|async|this|of|static|export|'
              r'import|debugger|extends|super|private|final)\b', Keyword),
-            (r'\b(abstract|boolean|byte|char|double|enum|final|float|goto|'
+            (r'\b(abstract|boolean|byte|char|double|enum|final|float|'
              r'implements|int|interface|long|native|package|private|protected|'
              r'public|short|synchronized|throws|transient|volatile)\b', Keyword.Reserved),
 

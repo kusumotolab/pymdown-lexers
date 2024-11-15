@@ -19,11 +19,13 @@ class MultibyteBnfLexer(RegexLexer):
             (r'\+', String.Escape),
             #.*?(\}\*)', String.Escape, String.Escape),
 
+            (r'//.*?$', Comment),
+
             # an only operator
             (r'::=', Operator),
 
             # fallback
-            (r'[^<>:{}*\+]+', Text),  # for performance
+            #(r'[^<>:{}*\+]+', Text),  # for performance
             (r'.', Text),
         ],
     }
