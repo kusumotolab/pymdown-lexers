@@ -37,7 +37,7 @@ class BetterTextLexer(RegexLexer):
             #(r'[+~-]?[\da-fA-F]+\b', Name),
 
 
-            (r'\b(for|in|while|do|break|return|continue|switch|case|default|if|else|'
+            (r'\b(for|in|while|do|break|continue|switch|case|default|if|else|'
              r'throw|try|catch|finally|yield|await|async|this|of|static|export|'
              r'import|debugger|extends|super|private|final)\b', Keyword),
             (r'\b(abstract|boolean|byte|char|double|enum|final|float|'
