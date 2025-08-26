@@ -11,21 +11,12 @@ class MultibyteBnfLexer(RegexLexer):
 
     tokens = {
         'root': [
-            (r'(<)(.+?)(>)',
-            #(r'(<)([ -;=?-~]+)(>)',
-             bygroups(Punctuation, Name.Class, Punctuation)),
-            (r'\{', String.Escape),
-            (r'\}\*', String.Escape),
-            (r'\+', String.Escape),
-            #.*?(\}\*)', String.Escape, String.Escape),
-
-            (r'//.*?$', Comment),
-
-            # an only operator
+            (r'(<)(.*?)(>)', bygroups(Punctuation, Name.Builtin, Punctuation)),
             (r'::=', Operator),
-
-            # fallback
-            #(r'[^<>:{}*\+]+', Text),  # for performance
-            (r'.', Text),
+            (r'\|+', Operator),
+            (r'"(.*?)"', String.Double),
+            (r"'(.*?)'", String.Single),
+            (r';', Punctuation),
+            (r'//.*?$', Comment),
         ],
     }

@@ -13,8 +13,6 @@ class BetterTextLexer(RegexLexer):
             (r'\?\?\?', String.Escape),
             (r'^[\da-zA-Z]+:', Name.Function),
 
-            (r'::=', Name.Label),
-
             (r'[↑↓→←─│┌┐┘└├┬┤┴┼]', Operator),
 
             (r'^(#)( .*)$', bygroups(Operator, Text)),
@@ -36,7 +34,6 @@ class BetterTextLexer(RegexLexer):
             (r'\b[\da-f]{8}\b', Number),  # ffffcc24
             #(r'[+~-]?[\da-fA-F]+\b', Name),
 
-
             (r'\b(for|in|while|do|break|continue|switch|case|default|if|else|'
              r'throw|try|catch|finally|yield|await|async|this|of|static|export|'
              r'import|debugger|extends|super|private|final)\b', Keyword),
@@ -45,6 +42,5 @@ class BetterTextLexer(RegexLexer):
              r'public|short|synchronized|throws|transient|volatile)\b', Keyword.Reserved),
 
             (r'\s+', Whitespace),
-
         ]
     }
