@@ -32,6 +32,7 @@ class BetterTextLexer(RegexLexer):
             (r'[+~-]?\d+\b', Number.Integer),
             (r'\b[\dA-F]{2}\b', Number),  # FF AB
             (r'\b[\da-f]{8,16}\b', Number),  # ffffcc24
+            (r'0x[\da-f]{8,16}\b', Number),  # ffffcc24
             #(r'[+~-]?[\da-fA-F]+\b', Name),
 
             (r'\b(for|in|while|do|break|continue|switch|case|default|if|else|'
